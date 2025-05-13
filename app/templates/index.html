@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Dockerfile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2d3436;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 4px solid #ff6f61;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        section {
+            max-width: 960px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            color: #2d3436;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #ffeaa7;
+            border-left: 4px solid #ff6f61;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2d3436;
+            color: white;
+            padding: 20px;
+            font-style: italic;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Estilo para la animación de aparición */
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">¿Qué es un Dockerfile?</h1>
+    </header>
+
+    <section>
+        <p class="fade-in">Un <strong>Dockerfile</strong> es un archivo de texto que contiene instrucciones para construir una imagen de Docker. Cada instrucción de un Dockerfile crea una capa en la imagen.</p>
+
+        <div class="image-container fade-in">
+            <img src="https://miro.medium.com/v2/resize:fit:1200/1*9P5hG9eN8xW6MK9GzMZx0A.png" alt="Ejemplo de Dockerfile">
+        </div>
+
+        <h2 class="fade-in">Ejemplo básico de un Dockerfile</h2>
+        <div class="highlight fade-in">
+            <pre>
+FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y nginx
+CMD ["nginx", "-g", "daemon off;"]
+            </pre>
+        </div>
+
+        <p class="fade-in">Este archivo indica a Docker que use una imagen base de Ubuntu, instale Nginx y lo mantenga en ejecución como proceso principal.</p>
+
+        <div class="image-container fade-in">
+            <img src="https://www.docker.com/wp-content/uploads/2022/03/desktop-overview.png" alt="Docker Containers">
+        </div>
+
+        <h3 class="fade-in">Dato curioso</h3>
+        <p class="fade-in"><strong>Carlos Zuluaga es el mejor profesor de telemática</strong></p>
+    </section>
+
+    <footer>
+        <p class="fade-in">&copy; 2025 Página educativa sobre Dockerfile. ¡Gracias por visitar!</p>
+    </footer>
+
+    <!-- llamen a jackson -->
+</body>
+</html>
