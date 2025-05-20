@@ -1,17 +1,23 @@
 ### Proyecto Final Docker
-## Autor: Samuel Parra Cadavid
+## Autor: David Vallejo Garcia
 ## Descripción
 
-Este proyecto consiste en una aplicación web ligera y escalable desarrollada con Python y Flask, empaquetada en un contenedor Docker. La aplicación sirve como una demostración práctica de los conocimientos adquiridos en el curso de Telemática, destacando el uso de contenedores para el despliegue de servicios web.
-##  Tecnologías Utilizadas
+Este proyecto es una aplicación web simple y fácil de ampliar, hecha con Python y Flask, y que se ejecuta dentro de un contenedor Docker. Sirve como ejemplo práctico de lo aprendido en el curso de Telemática, mostrando cómo usar contenedores para poner en marcha servicios web.
 
-- **Lenguaje:** Python 3.10
-- **Framework:** Flask
-- **Contenerización:** Docker
-- **Frontend:** HTML5, CSS3 (estilizado incluido en index.html)
-- **Sistema Operativo Base:** Ubuntu 22.04
-- **Infraestructura:** Aws Ec2
-- **Repositorio:** Git Hub
+##  Herramientas y Tecnologías Empleadas
+Python 3.10 como lenguaje principal de desarrollo.
+
+Flask, un microframework ligero para la creación de aplicaciones web.
+
+Docker para contenerizar y facilitar el despliegue de la aplicación.
+
+HTML5 y CSS3, integrados directamente en el archivo index.html, para el diseño de la interfaz.
+
+Ubuntu 22.04 como sistema operativo base en el entorno de ejecución.
+
+Amazon EC2 (AWS) como plataforma para la infraestructura en la nube.
+
+GitHub para el control de versiones y alojamiento del código fuente.
 
 ## 💡Requisitos
 
@@ -19,18 +25,10 @@ Tener -**Docker** instalado
 
 Tener -**Git**  instalado
 
-## 🗃️ Estructura Del Proyecto
-<div style="display: flex; gap: 10px;">
-    <img src="https://i.imgur.com/Gu0Wiyj.png" alt="Captura de la app" width="300"/>
-    <img src="https://i.imgur.com/liisb4c.png" alt="Captura de la app 2" width="300"/>
-    <img src="https://i.imgur.com/j72Zbx2.png" alt="Captura de la app 3" width="300"/>
-</div>
-
-
 ## 🔧Instrucciones De Despliegue:
 ## Instalación
 
-## 1. hacemos primero un update:
+## 1. Utilizamos un update:
 ```bash
 sudo apt update
 ```
@@ -39,14 +37,14 @@ sudo apt update
 sudo apt install docker-compose -y
 ```
 
-## 3. Clonamos este repositorio en tu maquina local:
+## 3. Clonamos el siguiente repositorio en nuestra maquina local:
 ```bash
-git clone https://github.com/samuel2524/Proyecto-final.git
+git clone https://github.com/deiviagogo/Final
 ```
 
-## 4. Entramos a Proyecto-final/
+## 4. Entramos a Final/
 ```bash
-cd Proyecto-final/
+cd Final/
 ```
 
 ## 5. Construye la imagen Docker con el siguiente comando(v01,v02,v03,v04):
@@ -61,7 +59,7 @@ sudo docker build -t proyectotelematica:1 .
 sudo docker run -d -p 80:80 proyectotelematica:1
 ```
 
-## 7. Verificamos si se creo
+## 7. Verificamos si esta creado
 
 ```bash
 sudo docker ps
@@ -79,12 +77,12 @@ http://ip publica
     - **app/templates/index.html: Cambia el contenido HTML de la página.**
 
 
-## tenemos que detener el contenedor anterior
+## Detenemos el contenedor anterior
 ```bash
 docker stop container id
 ```
 
-## Luego se borra
+## Luego se elimina
 ```bash
 docker rm container id
 ```
